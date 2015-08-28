@@ -1,0 +1,17 @@
+{
+  "addpin": [
+    {
+      "pin_name": "Taco Recipes",
+      "board_type": "Food",
+      "description": "Recipe",
+      "image": "http://img.foodnetwork.com/FOOD/2007/01/19/gi0210_tacos1_lead.jpg"
+    }
+  ],
+  "createboard": [
+    {
+      "board_name": "My Recipes",
+      "category": "Food",
+      "description": "Dinner Recipes"
+    }
+  ]
+}
