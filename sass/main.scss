@@ -1,0 +1,29 @@
+$font-stack:    'Helvetica', sans-serif;
+$primary-color: #333;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+  background-color: #EEE;
+}
+.pinDiv{
+  border: 1px solid black;
+  height: 370px;
+  width: 200px;
+  background-color: red;
+}
+
+.addPin{
+  border: 1px dotted red;
+}
+.imgDiv{
+  border: 1px dotted green;
+}
+.pinNameDiv{
+  border: 1px dotted blue;
+}
+
+.descriptionDiv{
+  border: 1px dotted pink;
+
+}
