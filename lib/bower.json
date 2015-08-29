@@ -20,7 +20,7 @@
     "firebase": "~2.2.9",
     "lodash": "~3.10.1",
     "q": "~1.0.1",
-    "angular": "~1.4.4",
+    "angular": "~1.4.5",
     "angular-route": "~1.4.4",
     "angularfire": "~1.1.2"
   }
