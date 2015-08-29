@@ -10,7 +10,7 @@
       <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
 </head>
 
-<body>
+<body ng-app="PinApp">
 
  <nav class="navbar navbar-default">
   <div class="container-fluid">
@@ -54,11 +54,15 @@
 <script src="lib/bower_components/firebase/firebase.js"></script>
 <script src="lib/bower_components/angularfire/dist/angularfire.min.js"></script>
 <script src="lib/bower_components/angular-route/angular-route.min.js"></script>
-<script src="lib/bower_components/angular-filter/dist/angular-filter.min.js"></script>
-<script src="lib/bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+<!-- <script src="lib/bower_components/angular-filter/dist/angular-filter.min.js"></script> -->
+<!-- <script src="lib/bower_components/angular-bootstrap/ui-bootstrap.min.js"></script> -->
 <script src="lib/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/lib/bower_components/bootstrap/dist/js/bootstrap.js"></script>
 <script src="app/app.js"></script>
 <script src="app/controllers/addCtrl.js"></script>
+<script src="app/controllers/LoginCtrl.js"></script>
+<script src="app/factories/auth.js"></script>
+<script src="app/factories/storeUid.js"></script>
 
 </body>
 </html>
