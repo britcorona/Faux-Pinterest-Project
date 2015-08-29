@@ -1,4 +1,6 @@
 <div class="jumbotron" id="loginTron">
+  <!-- If user is logged in it gives them the option of loggin out
+  This will be useful as we can just have a logout link that takes the user to #/login -->
   <div ng-show="authData">
     <p>Hello, {{ authData.facebook.displayName }}</p>
     <button type="button" class="btn btn-primary" ng-click="auth.$unauth()">Logout</button>
