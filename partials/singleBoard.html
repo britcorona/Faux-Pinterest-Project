@@ -1,3 +1,30 @@
 <h2>{{selectedBoard.title}}</h2>
 <h4>{{selectedBoard.category}}</h4>
 <p>{{selectedBoard.description}}</p>
+<button type="button" class="btn btn-primary" ng-click="showAddForm()"> Add a Pin</button>
+
+<div class="col-md-3" ng-show="pinFormVisible">
+  <div>
+    Pin name: <input type="text" ng-model="newPin.pin_name">
+  </div>
+
+  <div>
+    Image URL: <input type="text" ng-model="newPin.image">
+  </div>
+    
+  <div>
+    Description: <input type="text" ng-model="newPin.description">
+  </div>
+
+  <div>
+    Original URL: <input type="text" ng-model="newPin.origUrl">
+  </div>
+    
+<button ng-click="addPin()">Create Pin</button>
+</div>
+
+<div ng-repeat="pin in boardPins">
+  <h3>{{pin.pin_name}}</h3>
+  <img ng-src="{{pin.image}}">
+  {{pin.description}}
+</div>
