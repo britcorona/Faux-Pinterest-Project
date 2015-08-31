@@ -23,7 +23,7 @@
 <div class="col-md-3">
 
 <div>
-  <div ng-repeat="pin in pins">
+  <div ng-repeat="pin in pins | filter:pinSearch">
       <h3>{{pin.pin_name}}</h3>
       <img ng-src="{{pin.image}}">
       {{pin.description}}
