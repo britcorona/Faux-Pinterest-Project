@@ -5,7 +5,8 @@ body {
 
 .pinDiv {
   height: 370px;
-  width: 290px; }
+  width: 290px;
+  margin-bottom: 15px; }
 
 .gutter {
   background-color: #FFF;
@@ -23,9 +24,9 @@ body {
   height: 100%;
   padding: 0; }
 
-.pinIt {
-  height: 370px;
-  background-color: transparent; }
+.pinItButton {
+  background-color: transparent;
+  position: absolute; }
 
 .img {
   padding: 0;
@@ -40,7 +41,8 @@ body {
   height: 240px;
   width: 260px;
   padding: 0;
-  height: 65%; }
+  height: 65%;
+  position: relative; }
 
 .pinNameDiv {
   height: 15%;
@@ -59,8 +61,123 @@ p {
 .p-description {
   font-size: 12px; }
 
-.glyphicon-pushpin {
-  font-size: 16px;
-  color: crimson; }
+.modalPopup {
+  height: 450px;
+  padding: 0; }
+
+.paddingIssue {
+  padding: 0; }
+
+.modalAdd {
+  height: 450px;
+  background-color: #eee; }
+
+.modalAddContent {
+  margin-top: 35%; }
+
+.modalGutter {
+  background-color: #FFF;
+  height: 270px;
+  width: 100%;
+  position: relative;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: -1px 5px 11px -5px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: -1px 5px 11px -5px rgba(0, 0, 0, 0.57);
+  box-shadow: -1px 5px 11px -5px rgba(0, 0, 0, 0.57); }
+
+.modalAddPin {
+  height: 100%;
+  padding: 0; }
+
+.modalPinItButton {
+  background-color: transparent;
+  position: absolute; }
+
+.modalImg {
+  padding: 0;
+  -webkit-border-top-left-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+  -moz-border-radius-topleft: 8px;
+  -moz-border-radius-topright: 8px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px; }
+
+.modalImgDiv {
+  height: 240px;
+  width: 260px;
+  padding: 0;
+  height: 65%;
+  position: relative; }
+
+.modalPinNameDiv {
+  height: 15%;
+  border-top: 1px solid #eee; }
+
+.modalDescriptionDiv {
+  height: 15%;
+  border-top: 1px solid #eee; }
+
+.modalAddBoard {
+  height: 450px;
+  border: 1px solid black; }
+
+.pickBoard {
+  border: 1px solid blue; }
+
+.searchInput {
+  border: 1px solid red; }
+
+.listBoard {
+  border: 1px solid green; }
+
+.newBoard {
+  border: 1px solid yellow; }
+
+.p-newBoard {
+  font-size: 20px; }
+
+.ng-modal-overlay {
+  /* A dark translucent div that covers the whole screen */
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  opacity: 0.8; }
+
+.ng-modal-dialog {
+  /* A centered div above the overlay with a box shadow. */
+  z-index: 10000;
+  position: absolute;
+  width: 660px !important;
+  height: 490px !important;
+  /* Default */
+  /* Center the dialog */
+  top: 150%;
+  left: 150%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  background-color: #fff;
+  box-shadow: 4px 4px 80px #000; }
+
+.ng-modal-dialog-content {
+  padding: 10px;
+  text-align: left; }
+
+.ng-modal-close {
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 120%;
+  display: inline-block;
+  font-weight: bold;
+  font-family: 'arial', 'sans-serif'; }
 
 /*# sourceMappingURL=main.css.map */

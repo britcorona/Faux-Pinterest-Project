@@ -35,4 +35,10 @@ app.controller("PinCtrl",
         console.log("ho");
       $scope.hoverPin = false;
     };
+
+     $scope.modalShown = false;
+  $scope.toggleModal = function() {
+    console.log("click");
+    $scope.modalShown = !$scope.modalShown;
+  };
 }]);
