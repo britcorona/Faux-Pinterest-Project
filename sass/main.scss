@@ -7,23 +7,74 @@ body {
   background-color: #EEE;
 }
 .pinDiv{
-  border: 1px solid black;
+  // border: 1px solid #eee;
   height: 370px;
-  width: 200px;
-  background-color: red;
+  width: 290px;
+  
 }
+.gutter{
+  background-color: #FFF;
+  height: 370px;
+  width:100%;
+  position: relative;
+   -webkit-border-radius: 8px;
+-moz-border-radius: 8px;
+border-radius: 8px;
+-webkit-box-shadow: -1px 5px 11px -5px rgba(0,0,0,0.57);
+-moz-box-shadow: -1px 5px 11px -5px rgba(0,0,0,0.57);
+box-shadow: -1px 5px 11px -5px rgba(0,0,0,0.57);
 
+}
 .addPin{
-  border: 1px dotted red;
+  //border: 1px dotted yellow;
+  height: 100%;
+  padding: 0;
+
+}
+.pinIt{
+  //border: 2px dotted green;
+  height:370px;
+  background-color: transparent;
+  // opacity: 0.5;
+  //position: absolute;
+}
+.img{
+  padding:0;
+-webkit-border-top-left-radius: 8px;
+-webkit-border-top-right-radius: 8px;
+-moz-border-radius-topleft: 8px;
+-moz-border-radius-topright: 8px;
+border-top-left-radius: 8px;
+border-top-right-radius: 8px;
 }
 .imgDiv{
-  border: 1px dotted green;
+  //border: 2px dotted green;
+  height:240px;
+  width: 260px;
+  padding: 0;
+  height: 65%;
 }
 .pinNameDiv{
-  border: 1px dotted blue;
+  height: 15%;
+  border-top: 1px solid #eee;
 }
 
 .descriptionDiv{
-  border: 1px dotted pink;
+  height: 15%;
+  border-top: 1px solid #eee;
 
+}
+p{
+  width:260px;
+}
+.p-pinName{
+  font-size: 20px;
+}
+.p-description{
+  font-size: 12px;
+}
+
+.glyphicon-pushpin{
+  font-size: 16px;
+  color: crimson;
 }
