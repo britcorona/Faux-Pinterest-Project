@@ -1,8 +1,9 @@
 app.controller("homeCtrl", 
   ["$scope",
    "$firebaseArray",
-   "store-uid",
-  function($scope, $firebaseArray, storeUid) {
+   "Auth",
+  function($scope, $firebaseArray, Auth) {
+    $scope.name = Auth.$getAuth().facebook.displayName
 
     //This will connect to firebase and get the info
     var ref = new Firebase("https://pinterest-app.firebaseio.com/addpin");
@@ -11,14 +12,12 @@ app.controller("homeCtrl",
 
     //Add Pin
     $scope.addPin = function() {
-      console.log(storeUid.getUid());
       $scope.pins.$add({
         pin_name: $scope.newPin.pin_name,
         //board_id: $scope.newPin.board_id, 
         description: $scope.newPin.description,
         image: $scope.newPin.image,
         origUrl: $scope.newPin.origUrl,
-        uid: storeUid.getUid()
       });
       $scope.newPin = {"":""};
     };

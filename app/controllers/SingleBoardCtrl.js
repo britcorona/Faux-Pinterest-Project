@@ -1,9 +1,18 @@
 app.controller("SingleBoardCtrl", 
   ["$scope",
    "$firebaseArray",
-   "store-uid",
+   "Auth",
    "$routeParams",
-  function($scope, $firebaseArray, storeUid, $routeParams) {
+   "Logout",
+   "$location",
+  function($scope, $firebaseArray, Auth, $routeParams, Logout, $location) {
+
+    // Logout
+    $scope.logout = function(){
+      Logout();
+      console.log("logged out");
+      $location.path("#/login");
+    };
 
     //This will connect to firebase and get the info
     var boardsRef = new Firebase("https://pinterest-app.firebaseio.com/boards");
@@ -42,14 +51,14 @@ app.controller("SingleBoardCtrl",
 
     //Add Pin
     $scope.addPin = function() {
-      console.log(storeUid.getUid());
+      console.log(Auth.$getAuth().uid);
       $scope.pins.$add({
         pin_name: $scope.newPin.pin_name,
         board_id: $scope.boardId, 
         description: $scope.newPin.description,
         image: $scope.newPin.image,
         origUrl: $scope.newPin.origUrl,
-        uid: storeUid.getUid()
+        uid: Auth.$getAuth().uid
       });
       $scope.newPin = {"":""};
     };

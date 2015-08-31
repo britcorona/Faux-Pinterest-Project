@@ -3,8 +3,15 @@ app.controller("LoginCtrl",
   "$scope", 
   "Auth", 
   "$location",
-  "store-uid",
-  function(currentAuth, $scope, Auth, $location, storeUid) {
+  "Logout",
+  function(currentAuth, $scope, Auth, $location, Logout) {
+
+    // Logout
+    $scope.logout = function(){
+      Logout();
+      console.log("logged out");
+    };
+
   // currentAuth (provided by resolve) will contain the
   // authenticated user or null if not logged in
 
@@ -14,8 +21,7 @@ app.controller("LoginCtrl",
     $scope.auth.$onAuth(function(authData) {
       $scope.authData = authData;
       if(authData !== null){
-        storeUid.setUid(authData.auth.uid);
-        console.log(storeUid.getUid());
+        console.log(authData.auth.uid);
       } else {
         console.log('User not currently logged in');
       }
@@ -37,8 +43,6 @@ app.controller("LoginCtrl",
           console.log("Login Failed!", error);
         } else {
           console.log("Authenticated successfully with payload:", authData);
-          storeUid.setUid(authData.auth.uid);
-          console.log(storeUid.getUid());
           $location.path("#/boards");
         }
       });
