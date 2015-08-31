@@ -60,7 +60,7 @@ app.config(['$routeProvider', function($routeProvider){
     }).
     when('/home', {
       templateUrl: 'partials/home.html',
-      controller: 'HomeCtrl',
+      controller: 'homeCtrl',
       resolve: {
         "currentAuth": ["Auth", function(Auth) {
           return Auth.$requireAuth();

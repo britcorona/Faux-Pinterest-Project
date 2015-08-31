@@ -24,8 +24,10 @@ body {
   padding: 0; }
 
 .pinIt {
-  height: 370px;
-  background-color: transparent; }
+  position: relative;
+  display: inline-block;
+  font-size: 1.5em;
+  color: black; }
 
 .img {
   padding: 0;
@@ -40,7 +42,11 @@ body {
   height: 240px;
   width: 260px;
   padding: 0;
-  height: 65%; }
+  height: 65%;
+  position: relative; }
+
+#pinItButton {
+  position: absolute; }
 
 .pinNameDiv {
   height: 15%;
