@@ -49,15 +49,6 @@ app.config(['$routeProvider', function($routeProvider){
         }]
       }
     }).
-    when('/addPin', {
-      templateUrl: 'partials/addPin.html',
-      controller: 'AddPinCtrl',
-      resolve: {
-        "currentAuth": ["Auth", function(Auth) {
-          return Auth.$requireAuth();
-        }]
-      }
-    }).
     when('/home', {
       templateUrl: 'partials/home.html',
       controller: 'HomeCtrl',
@@ -67,9 +58,14 @@ app.config(['$routeProvider', function($routeProvider){
         }]
       }
     }).
-    when('/', {
+    when('/addPin', {
 			templateUrl: 'partials/addPin.html',
-			controller: 'PinCtrl'
+			controller: 'PinCtrl',
+			resolve: {
+        "currentAuth": ["Auth", function(Auth) {
+          return Auth.$requireAuth();
+        }]
+      }
 		}).
     otherwise({
       redirectTo: '/home'

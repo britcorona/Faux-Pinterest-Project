@@ -37,6 +37,8 @@ app.controller("LoginCtrl",
           console.log("Login Failed!", error);
         } else {
           console.log("Authenticated successfully with payload:", authData);
+          storeUid.setUid(authData.auth.uid);
+          console.log(storeUid.getUid());
         }
       });
     }
