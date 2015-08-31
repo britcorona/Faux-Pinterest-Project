@@ -6,9 +6,11 @@
         <!-- <span class="pinIt glyphicon glyphicon-pushpin" ng-show="hoverPin"></span> -->
       <!-- </div> -->
         <div class="col-md-12 imgDiv">
+          <button type="button" ng-show="hoverPin" id="deleteItItButton" class="deleteIt">Delete</button>
           <button type="button" ng-show="hoverPin" id="pinItButton" class="pinIt">PinIt</button>
          <img class="img"ng-src="{{pin.image}}" height="100%" width= "100%">
         </div>
+
    
       <div class="col-md-12 pinNameDiv">
            <p class="p-pinName">{{pin.pin_name}}</p>

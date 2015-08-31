@@ -1,6 +1,6 @@
 body {
   font: 100% "Helvetica", sans-serif;
-  color: #333;
+  color: #333333;
   background-color: #EEE; }
 
 .pinDiv {
@@ -52,6 +52,18 @@ body {
   height: 15%;
   border-top: 1px solid #eee; }
 
+#deleteItButton {
+  position: absolute; }
+
+.deleteIt {
+  position: relative;
+  display: inline-block;
+  font-size: 1.5em;
+  color: black;
+  float: right; 
+  clear: none;
+}
+
 .descriptionDiv {
   height: 15%;
   border-top: 1px solid #eee; }
@@ -68,5 +80,3 @@ p {
 .glyphicon-pushpin {
   font-size: 16px;
   color: crimson; }
-
-/*# sourceMappingURL=main.css.map */
