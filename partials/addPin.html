@@ -1,18 +1,20 @@
 
-<div class="container-fluid pinDiv">
+<div class="container-fluid pinDiv" ng-controller="PinCtrl" ng-mouseover="hoverIn()" ng-mouseleave="hoverOut()">
   <div class="row">
     <div class = "col-md-12 addPin">
-      <div class="row">
-      <div class="col-md-12 imgDiv">
-        <!-- img-->
-      </div>
+      <div class="col-md-12 pinIt" ng-show="hoverPin">
+        <span class="glyphicon glyphicon-music"></span>
+        <div class="col-md-12 imgDiv">
+         img
+        </div>
+    </div>
       <div class="col-md-12 pinNameDiv">
-          <!-- Tacos-->
+           Tacos
       </div>
       <div class="col-md-12 descriptionDiv">
-          <!-- Delicious Tacos made from the heart! -->
+          Delicious Tacos made from the heart!
       </div>
-    </div><!-- /row-->
+   
     </div><!-- /addPin-->
   </div><!-- /row-->
 </div><!-- /pinDiv-->

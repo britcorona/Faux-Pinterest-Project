@@ -18,4 +18,16 @@ app.controller("PinCtrl",
 				image: $scope.newPin.image
 			});
 		};
+
+    $scope.hoverPin = false;
+
+    $scope.hoverIn = function(){
+      console.log("hey");
+      $scope.hoverPin = true;
+    };
+    $scope.hoverOut = function(){
+        console.log("ho");
+      $scope.hoverPin = false;
+    };
+
 }]);

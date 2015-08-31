@@ -4,21 +4,37 @@ body {
   background-color: #EEE; }
 
 .pinDiv {
-  border: 1px solid black;
-  height: 370px;
+  border: 1px solid #eee;
+  height: 100%;
   width: 200px;
-  background-color: red; }
+  background-color: #FFF;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: -1px 5px 11px -5px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: -1px 5px 11px -5px rgba(0, 0, 0, 0.57);
+  box-shadow: -1px 5px 11px -5px rgba(0, 0, 0, 0.57); }
 
 .addPin {
-  border: 1px dotted red; }
+  height: 370px;
+  padding: 0;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px; }
+
+.pinIt {
+  height: 65%;
+  background-color: transparent; }
 
 .imgDiv {
-  border: 1px dotted green; }
+  height: 65%; }
 
 .pinNameDiv {
-  border: 1px dotted blue; }
+  height: 15%;
+  border-top: 1px solid #eee; }
 
 .descriptionDiv {
-  border: 1px dotted pink; }
+  height: 15%;
+  border-top: 1px solid #eee; }
 
 /*# sourceMappingURL=main.css.map */
