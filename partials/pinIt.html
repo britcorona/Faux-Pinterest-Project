@@ -25,16 +25,21 @@
                 <div class="row">
                   <div class="col-md-12">
                     <div class="col-md-12 pickBoard">
-                      <h1>Pick a Board</h1>
+                      <h4>Pick a board</h4>
                     </div>
-                     <div class="col-md-12 searchInput">
-                      <input type="text" placeholder="search">
+                     <div class="col-md-12 searchInput input-group-lg">
+                      <input type="text" class="form-control" placeholder="Search" aria-describedby="sizing-addon1">
                     </div>
-                     <div class="col-md-12 listBoard">
+                     <div class="col-md-12 listBoard" ng-controller="BoardsCtrl">
                         <h6>All Boards</h6>
-                          <div class= "col-md-12" ng-repeat="board in boards">
-                          {{board.title}}
+                          
+                          <div class="col-md-12" ng-repeat="board in userBoards">
+                            <a ng-href="#/board/{{ board.$id }}">
+                              <h2>{{board.title}}</h2>
+                              <img class="img"ng-src="{{board.imgage}}" height="146px" width= "216px">
+                            </a>
                           </div>
+                       
                           <div class="col-md-12 newBoard">
                             <button class="btn btn-default glyphicon glyphicon-plus"></button>
                           <p class="p-newBoard">Create A New Board</p> 

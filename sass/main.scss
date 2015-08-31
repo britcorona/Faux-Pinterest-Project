@@ -14,7 +14,7 @@ body {
 }
 .gutter{
   background-color: #FFF;
-  height: 370px;
+  height: 100%;
   width:100%;
   position: relative;
   -webkit-border-radius: 8px;
@@ -38,14 +38,7 @@ body {
   font-size: 1.5em;
   color: black;
 }
-.pinItButton{
-  //border: 2px dotted green;
-  //height:370px;
-  background-color: transparent;
-  // opacity: 0.5;
-  position: absolute;
 
-}
 .img{
   padding:0;
   -webkit-border-top-left-radius: 8px;
@@ -88,10 +81,11 @@ body {
 
 .descriptionDiv{
   height: 15%;
+  width: 370px;
   border-top: 1px solid #eee;
 }
 p{
-  width:260px;
+  width:240px;
 }
 .p-pinName{
   font-size: 20px;
@@ -110,6 +104,9 @@ p{
 .modalPopup{
   height: 450px;
   padding: 0;
+  -webkit-border-radius: 8px;
+-moz-border-radius: 8px;
+border-radius: 8px;
 }
 .paddingIssue{
   padding:0;
@@ -118,6 +115,9 @@ p{
  // border: 1px solid black;
   height: 450px;
   background-color: #eee;
+-webkit-border-top-left-radius: 8px;
+-moz-border-radius-topleft: 8px;
+border-top-left-radius: 8px;
 }
 .modalAddContent{
   margin-top: 35%;
@@ -127,7 +127,7 @@ p{
 // pin items //
 .modalGutter{
   background-color: #FFF;
-  height: 270px;
+  height: 100%;
   width:100%;
   position: relative;
    -webkit-border-radius: 8px;
@@ -170,6 +170,7 @@ border-top-right-radius: 8px;
 }
 .modalPinNameDiv{
   height: 15%;
+
   border-top: 1px solid #eee;
 }
 
@@ -181,16 +182,19 @@ border-top-right-radius: 8px;
 
 .modalAddBoard{
   height: 450px;
-  border: 1px solid black;
+  //border: 1px solid black;
 }
 .pickBoard{
-  border: 1px solid blue;
+ // border: 1px solid blue;
+  margin-top: 15px;
 }
 .searchInput{
-  border: 1px solid red;
+  //border: 1px solid red;
 }
 .listBoard{
-  border: 1px solid green;
+  //border: 1px solid green;
+  margin-top:15px;
+  border-top: 1px solid #eee;
 }
 .newBoard{
   border: 1px solid yellow;
@@ -203,13 +207,13 @@ border-top-right-radius: 8px;
 /// modal ///
 .ng-modal-overlay {
   /* A dark translucent div that covers the whole screen */
-  position:absolute;
+  position:fixed;
   z-index:9999;
   top:0;
   left:0;
   width:100%;
   height:100%;
-  background-color:red;
+  background-color:#000;
   opacity: 0.8;
 }
 .ng-modal-dialog {
@@ -217,7 +221,7 @@ border-top-right-radius: 8px;
   z-index:10000;
   position: absolute;
   width: 660px !important;
-  height: 490px !important; /* Default */
+  height: 460px !important; /* Default */
 
   /* Center the dialog */
   top: 150%;
@@ -228,9 +232,12 @@ border-top-right-radius: 8px;
 
   background-color: #fff;
   box-shadow: 4px 4px 80px #000;
+  -webkit-border-radius: 8px;
+-moz-border-radius: 8px;
+border-radius: 8px;
 }
 .ng-modal-dialog-content {
-  padding:10px;
+  padding:0;
   text-align: left;
 }
 .ng-modal-close {

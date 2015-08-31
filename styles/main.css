@@ -10,7 +10,7 @@ body {
 
 .gutter {
   background-color: #FFF;
-  height: 370px;
+  height: 100%;
   width: 100%;
   position: relative;
   -webkit-border-radius: 8px;
@@ -29,10 +29,6 @@ body {
   display: inline-block;
   font-size: 1.5em;
   color: black; }
-
-.pinItButton {
-  background-color: transparent;
-  position: absolute; }
 
 .img {
   padding: 0;
@@ -69,10 +65,11 @@ body {
 
 .descriptionDiv {
   height: 15%;
+  width: 370px;
   border-top: 1px solid #eee; }
 
 p {
-  width: 260px; }
+  width: 240px; }
 
 .p-pinName {
   font-size: 20px; }
@@ -82,21 +79,27 @@ p {
 
 .modalPopup {
   height: 450px;
-  padding: 0; }
+  padding: 0;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px; }
 
 .paddingIssue {
   padding: 0; }
 
 .modalAdd {
   height: 450px;
-  background-color: #eee; }
+  background-color: #eee;
+  -webkit-border-top-left-radius: 8px;
+  -moz-border-radius-topleft: 8px;
+  border-top-left-radius: 8px; }
 
 .modalAddContent {
   margin-top: 35%; }
 
 .modalGutter {
   background-color: #FFF;
-  height: 270px;
+  height: 100%;
   width: 100%;
   position: relative;
   -webkit-border-radius: 8px;
@@ -139,17 +142,14 @@ p {
   border-top: 1px solid #eee; }
 
 .modalAddBoard {
-  height: 450px;
-  border: 1px solid black; }
+  height: 450px; }
 
 .pickBoard {
-  border: 1px solid blue; }
-
-.searchInput {
-  border: 1px solid red; }
+  margin-top: 15px; }
 
 .listBoard {
-  border: 1px solid green; }
+  margin-top: 15px;
+  border-top: 1px solid #eee; }
 
 .newBoard {
   border: 1px solid yellow; }
@@ -159,13 +159,13 @@ p {
 
 .ng-modal-overlay {
   /* A dark translucent div that covers the whole screen */
-  position: absolute;
+  position: fixed;
   z-index: 9999;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: red;
+  background-color: #000;
   opacity: 0.8; }
 
 .ng-modal-dialog {
@@ -173,7 +173,7 @@ p {
   z-index: 10000;
   position: absolute;
   width: 660px !important;
-  height: 490px !important;
+  height: 460px !important;
   /* Default */
   /* Center the dialog */
   top: 150%;
@@ -182,10 +182,13 @@ p {
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   background-color: #fff;
-  box-shadow: 4px 4px 80px #000; }
+  box-shadow: 4px 4px 80px #000;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px; }
 
 .ng-modal-dialog-content {
-  padding: 10px;
+  padding: 0;
   text-align: left; }
 
 .ng-modal-close {
