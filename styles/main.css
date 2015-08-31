@@ -1,6 +1,6 @@
 body {
   font: 100% "Helvetica", sans-serif;
-  color: #333333;
+  color: #333;
   background-color: #EEE; }
 
 .pinDiv {
@@ -60,9 +60,7 @@ body {
   display: inline-block;
   font-size: 1.5em;
   color: black;
-  float: right; 
-  clear: none;
-}
+  float: right; }
 
 .descriptionDiv {
   height: 15%;
@@ -80,3 +78,5 @@ p {
 .glyphicon-pushpin {
   font-size: 16px;
   color: crimson; }
+
+/*# sourceMappingURL=main.css.map */
