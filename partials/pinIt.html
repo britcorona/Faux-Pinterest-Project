@@ -1,0 +1,49 @@
+    <modal-dialog show='modalShown' width='100%' height='100%'>
+        <div class="container-fluid modalPopup">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="col-md-6 modalAdd">
+                <div class="col-md-12 modalAddContent">
+                  <div class="col-md-12 modalGutter">
+                    <div class="row">
+                      <div class = "col-md-3 modalAddPin"> 
+                          <div class="col-md-12 modalImgDiv">
+                            <img class="modalImg"ng-src="{{pin.image}}" height="100%" width= "100%">   
+                          </div><!--/imgDiv -->
+                        <div class="col-md-12 modalPinNameDiv">
+                             <p class="p-pinName">{{pin.pin_name}}</p>
+                        </div>
+                        <div class="col-md-12 modalDescriptionDiv">
+                           <p class="p-description">{{pin.description}}</p>
+                        </div>
+                      </div><!-- /addPin-->
+                    </div><!-- /row-->
+                  </div> <!--gutter -->
+              </div> <!--modalAddcontent -->
+            </div> <!--modalAdd -->
+              <div class="col-md-6 modalAddBoard">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="col-md-12 pickBoard">
+                      <h1>Pick a Board</h1>
+                    </div>
+                     <div class="col-md-12 searchInput">
+                      <input type="text" placeholder="search">
+                    </div>
+                     <div class="col-md-12 listBoard">
+                        <h6>All Boards</h6>
+                          <div class= "col-md-12" ng-repeat="board in boards">
+                          {{board.title}}
+                          </div>
+                          <div class="col-md-12 newBoard">
+                            <button class="btn btn-default glyphicon glyphicon-plus"></button>
+                          <p class="p-newBoard">Create A New Board</p> 
+                        </div>
+                    </div><!-- /listBoard -->
+                  </div><!-- /col-md-12 -->
+                </div><!-- /row -->
+              </div><!-- /modalAddBoard -->
+            </div><!-- /col-md-12 -->
+          </div><!-- /row -->
+        </div><!-- /container-fluid -->
+    </modal-dialog> 
