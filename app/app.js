@@ -40,6 +40,15 @@ app.config(['$routeProvider', function($routeProvider){
         }]
       }
     }).
+    when('/board/:id', {
+      templateUrl: 'partials/singleBoard.html',
+      controller: 'SingleBoardCtrl',
+      resolve: {
+        "currentAuth": ["Auth", function(Auth) {
+          return Auth.$requireAuth();
+        }]
+      }
+    }).
     when('/profile/:id', {
       templateUrl: 'partials/profile.html',
       controller: 'ProfileCtrl',
