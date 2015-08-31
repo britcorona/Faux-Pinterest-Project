@@ -48,7 +48,8 @@ app.controller("PinCtrl",
     };
 
      $scope.modalShown = false;
-  $scope.toggleModal = function() {
+
+    $scope.toggleModal = function() {
     console.log("click");
     $scope.modalShown = !$scope.modalShown;
   };
