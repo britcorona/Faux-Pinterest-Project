@@ -1,8 +1,17 @@
 app.controller("BoardsCtrl", 
   ["$scope",
    "$firebaseArray",
-   "store-uid",
-  function($scope, $firebaseArray, storeUid) {
+   "Auth",
+   "Logout",
+   "$location",
+  function($scope, $firebaseArray, Auth, Logout, $location) {
+
+    // Logout
+    $scope.logout = function(){
+      Logout();
+      console.log("logged out");
+      $location.path("#/login");
+    };
 
     //This will connect to firebase and get the info
     var ref = new Firebase("https://pinterest-app.firebaseio.com/boards");
@@ -14,7 +23,7 @@ app.controller("BoardsCtrl",
       .then(function(boards) { 
         console.log("all boards", $scope.boards);
        $scope.userBoards = boards.filter(function(board){
-          return board.uid === storeUid.getUid();
+          return board.uid === Auth.$getAuth().uid;
         });
         console.log("board pins", $scope.userBoards);   
       });
@@ -35,7 +44,7 @@ app.controller("BoardsCtrl",
         title: $scope.newBoard.title,
         description: $scope.newBoard.description,
         category : $scope.newBoard.category,
-        uid: storeUid.getUid(),
+        uid: Auth.$getAuth().uid,
         imgage: $scope.newBoard.image
       });
       $scope.newBoard = {"":""};

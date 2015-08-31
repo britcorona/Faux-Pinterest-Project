@@ -2,29 +2,36 @@
 app.controller("PinCtrl", 
   ["$scope",
    "$firebaseArray",
-   "store-uid",
-  function($scope, $firebaseArray, storeUid) {
+   "Auth",
+   "Logout",
+   "$location",
+  function($scope, $firebaseArray, Auth, Logout, $location) {
 
   	//This will connect to firebase and get the info
 	  var ref = new Firebase("https://pinterest-app.firebaseio.com/addpin");
 	  // download the data into a local object
 	  $scope.pins = $firebaseArray(ref);
 
+    // Logout
+    $scope.logout = function(){
+      Logout();
+      console.log("logged out");
+      $location.path("#/login");
+    };
+    
 	  //Add Pin
 		$scope.addPin = function() {
 			console.log(storeUid.getUid());
 			$scope.pins.$add({
 				pin_name: $scope.newPin.pin_name,
-				//board_id: $scope.newPin.board_id, 
 				description: $scope.newPin.description,
 				image: $scope.newPin.image,
 				origUrl: $scope.newPin.origUrl,
-				uid: storeUid.getUid()
+        uid: Auth.$getAuth().uid
 			});
 			$scope.newPin = {"":""};
 		};
 
-    
     $scope.hoverPin = false;
 
     $scope.hoverIn = function(){
