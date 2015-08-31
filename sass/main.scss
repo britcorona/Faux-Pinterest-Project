@@ -17,12 +17,12 @@ body {
   height: 370px;
   width:100%;
   position: relative;
-   -webkit-border-radius: 8px;
--moz-border-radius: 8px;
-border-radius: 8px;
--webkit-box-shadow: -1px 5px 11px -5px rgba(0,0,0,0.57);
--moz-box-shadow: -1px 5px 11px -5px rgba(0,0,0,0.57);
-box-shadow: -1px 5px 11px -5px rgba(0,0,0,0.57);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: -1px 5px 11px -5px rgba(0,0,0,0.57);
+  -moz-box-shadow: -1px 5px 11px -5px rgba(0,0,0,0.57);
+  box-shadow: -1px 5px 11px -5px rgba(0,0,0,0.57);
 
 }
 .addPin{
@@ -32,20 +32,19 @@ box-shadow: -1px 5px 11px -5px rgba(0,0,0,0.57);
 
 }
 .pinIt{
-  //border: 2px dotted green;
-  height:370px;
-  background-color: transparent;
-  // opacity: 0.5;
-  //position: absolute;
+  position: relative;
+  display: inline-block;
+  font-size: 1.5em;
+  color: black;
 }
 .img{
   padding:0;
--webkit-border-top-left-radius: 8px;
--webkit-border-top-right-radius: 8px;
--moz-border-radius-topleft: 8px;
--moz-border-radius-topright: 8px;
-border-top-left-radius: 8px;
-border-top-right-radius: 8px;
+  -webkit-border-top-left-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+  -moz-border-radius-topleft: 8px;
+  -moz-border-radius-topright: 8px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 .imgDiv{
   //border: 2px dotted green;
@@ -53,7 +52,13 @@ border-top-right-radius: 8px;
   width: 260px;
   padding: 0;
   height: 65%;
+  position: relative;
 }
+
+#pinItButton {
+  position: absolute;
+}
+
 .pinNameDiv{
   height: 15%;
   border-top: 1px solid #eee;
