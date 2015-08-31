@@ -24,8 +24,7 @@
     <div class="col-md-3" ng-repeat="board in userBoards">
       <a ng-href="#/board/{{ board.$id }}">
         <h2>{{board.title}}</h2>
-        <h4>{{board.category}}</h4>
-        <p>{{board.description}}</p>
+        <img class="img"ng-src="{{board.imgage}}" height="146px" width= "216px">
       </a>
     </div>
   </div>
