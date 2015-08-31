@@ -31,7 +31,7 @@ app.config(['$routeProvider', function($routeProvider){
         }]
       }
     }).
-    when('/boards/:id', {
+    when('/boards', {
       templateUrl: 'partials/boards.html',
       controller: 'BoardsCtrl',
       resolve: {
