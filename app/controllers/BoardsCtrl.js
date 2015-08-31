@@ -9,6 +9,16 @@ app.controller("BoardsCtrl",
     // download the data into a local object
     $scope.boards = $firebaseArray(ref);
 
+    $scope.userBoards = [];
+    $scope.boards.$loaded()
+      .then(function(boards) { 
+        console.log("all boards", $scope.boards);
+       $scope.userBoards = boards.filter(function(board){
+          return board.uid === storeUid.getUid();
+        });
+        console.log("board pins", $scope.userBoards);   
+      });
+
     $scope.AddBoardsShown = false;
     $scope.showAddBoards = function() {
       if ($scope.AddBoardsShown) {
