@@ -40,14 +40,20 @@ app.controller("SingleBoardCtrl",
 
     $scope.boardPins = [];
 
-    $scope.pins.$loaded()
-      .then(function(pins) { 
-        console.log("all pins", $scope.pins);
-       $scope.boardPins = pins.filter(function(pin){
-          return pin.board_id === $scope.boardId;
-        });
-        console.log("board pins", $scope.boardPins);   
+    // $scope.pins.$loaded()
+    //   .then(function(pins) { 
+    //     console.log("all pins", $scope.pins);
+    //    $scope.boardPins = pins.filter(function(pin){
+    //       return pin.board_id === $scope.boardId;
+    //     });
+    //     console.log("board pins", $scope.boardPins);   
+    //   });
+
+    $scope.pins.$watch(function(){
+      $scope.boardPins = $scope.pins.filter(function(pin){
+        return pin.board_id === $scope.boardId;
       });
+    });
 
     //Add Pin
     $scope.addPin = function() {

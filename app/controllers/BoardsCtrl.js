@@ -19,14 +19,12 @@ app.controller("BoardsCtrl",
     $scope.boards = $firebaseArray(ref);
 
     $scope.userBoards = [];
-    $scope.boards.$loaded()
-      .then(function(boards) { 
-        console.log("all boards", $scope.boards);
-       $scope.userBoards = boards.filter(function(board){
-          return board.uid === Auth.$getAuth().uid;
-        });
-        console.log("board pins", $scope.userBoards);   
+
+    $scope.boards.$watch(function() {
+      $scope.userBoards = $scope.boards.filter(function(board){
+        return board.uid === Auth.$getAuth().uid;
       });
+    });
 
     $scope.AddBoardsShown = false;
     $scope.showAddBoards = function() {

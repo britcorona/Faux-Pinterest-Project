@@ -10,17 +10,6 @@ app.controller("homeCtrl",
     // download the data into a local object
     $scope.pins = $firebaseArray(ref);
 
-    //Add Pin
-    $scope.addPin = function() {
-      $scope.pins.$add({
-        pin_name: $scope.newPin.pin_name,
-        //board_id: $scope.newPin.board_id, 
-        description: $scope.newPin.description,
-        image: $scope.newPin.image,
-        origUrl: $scope.newPin.origUrl,
-      });
-      $scope.newPin = {"":""};
-    };
-  }]);
+}]);
 
 //current user id, filter by the user id, only display filtered pins
