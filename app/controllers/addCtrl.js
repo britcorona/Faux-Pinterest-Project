@@ -35,11 +35,11 @@ app.controller("PinCtrl",
     $scope.hoverPin = false;
 
     $scope.hoverIn = function(){
-      console.log("hey");
+      //console.log("hey");
       $scope.hoverPin = true;
     };
     $scope.hoverOut = function(){
-        console.log("ho");
+        //console.log("ho");
       $scope.hoverPin = false;
     };
 }]);

@@ -3,7 +3,7 @@ app.controller("homeCtrl",
    "$firebaseArray",
    "Auth",
   function($scope, $firebaseArray, Auth) {
-    $scope.name = Auth.$getAuth().facebook.displayName
+    $scope.name = Auth.$getAuth().facebook.displayName;
 
     //This will connect to firebase and get the info
     var ref = new Firebase("https://pinterest-app.firebaseio.com/addpin");
