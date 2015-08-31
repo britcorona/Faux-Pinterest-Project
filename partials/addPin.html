@@ -1,18 +1,37 @@
+<div class="col-md-3">
+  <div>
+    Pin name: <input type="text" ng-model="newPin.pin_name">
+  </div>
 
-<div class="container-fluid pinDiv">
-  <div class="row">
-    <div class = "col-md-12 addPin">
-      <div class="row">
-      <div class="col-md-12 imgDiv">
-        <!-- img-->
-      </div>
-      <div class="col-md-12 pinNameDiv">
-          <!-- Tacos-->
-      </div>
-      <div class="col-md-12 descriptionDiv">
-          <!-- Delicious Tacos made from the heart! -->
-      </div>
-    </div><!-- /row-->
-    </div><!-- /addPin-->
-  </div><!-- /row-->
-</div><!-- /pinDiv-->
+  <div>
+    Board Type: <input type="text" ng-model="newPin.board_type">
+  </div>
+    
+  <div>
+    Description: <input type="text" ng-model="newPin.description">
+  </div>
+    
+<button ng-click="addPin()">Create Pin</button>
+
+</div>
+
+
+<div class="col-md-3">
+
+<div>
+  <div ng-repeat="addPin in addPins">
+      <h3>{{addpin.pin_name}}</h3>
+  </div>
+</div>
+
+</div>
+
+
+<div class="col-md-3">
+
+</div>
+
+
+<div class="col-md-3">
+
+</div>

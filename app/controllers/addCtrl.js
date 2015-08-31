@@ -7,15 +7,18 @@ app.controller("PinCtrl",
   	//This will connect to firebase and get the info
 	  var ref = new Firebase("https://pinterest-app.firebaseio.com/addpin");
 	  // download the data into a local object
-	  $scope.songs = $firebaseArray(ref);
+	  $scope.addpin = $firebaseArray(ref);
 
 	  //Add Song
 		$scope.addPin = function() {
-			$scope.songs.$add({
+			$scope.addpin.$add({
 				pin_name: $scope.newPin.pin_name,
-				board_type: $scope.newPin.board_type, 
+				board_id: $scope.newPin.board_id, 
 				description: $scope.newPin.description,
-				image: $scope.newPin.image
+				image: $scope.newPin.image,
+				origUrl: $scope.newPin.origUrl,
+				uid: $scope.newPin.uid
 			});
+			$scope.newPin = {"":""};
 		};
 }]);
