@@ -23,4 +23,16 @@ app.controller("PinCtrl",
 			});
 			$scope.newPin = {"":""};
 		};
+
+    
+    $scope.hoverPin = false;
+
+    $scope.hoverIn = function(){
+      console.log("hey");
+      $scope.hoverPin = true;
+    };
+    $scope.hoverOut = function(){
+        console.log("ho");
+      $scope.hoverPin = false;
+    };
 }]);
