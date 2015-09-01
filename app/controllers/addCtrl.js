@@ -49,11 +49,20 @@ app.controller("PinCtrl",
       $scope.hoverDeletePin = false;
     };
 
-     $scope.modalShown = false;
 
+// modal popup function
+     $scope.modalShown = false;
     $scope.toggleModal = function(pin) {
       $scope.modalShown = true;
       PinIt.setPinId(pin.$id);
+    };
+
+//quick add div
+    $scope.quickAddDiv = false;
+
+    $scope.quickAdd = function(){
+      console.log("click");
+      $scope.quickAddDiv = true;
     };
 
 }]);
