@@ -82,11 +82,12 @@ body {
 }
 .imgDiv{
   //border: 2px dotted green;
-  height:240px;
+  max-height:260px;
   width: 260px;
   padding: 0;
   height: 65%;
   position: relative;
+  overflow: hidden;
 }
 
 #pinItButton {
@@ -416,7 +417,8 @@ a{
 .mainImgDiv{
   //border: 1px dotted red;
   padding:0;
-  height: 155px;
+  max-height: 155px;
+  overflow: hidden;
 }
 .miniImages{
   //border: 1px dotted green;
