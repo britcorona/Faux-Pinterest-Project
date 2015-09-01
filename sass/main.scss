@@ -6,6 +6,16 @@ body {
   color: $primary-color;
   background-color: #EEE;
 }
+//// nav /////
+
+.navbar-default{
+  margin-bottom: 0;
+}
+
+
+
+
+///////
 .pinDiv{
   // border: 1px solid #eee;
   height: 370px;
@@ -247,7 +257,7 @@ text-decoration: none !important;
   height: 460px !important; /* Default */
 
   /* Center the dialog */
-    top: 25%;
+    top: 15%;
     right: 0;
     bottom: 0;
     left: 25%;
@@ -283,6 +293,7 @@ border-radius: 8px;
 .boardDiv{
  // border: 1px dotted blue;
   height: 300px;
+  margin-top: 10px;
 }
 .createBoard{
   border: 2px dashed #bbb;
@@ -397,10 +408,131 @@ a{
 //// boards modal popup ///
 
 
+/////////////////////////////////////
+//// single boards page ///
+.selectedBoard{
+  height:150px;
+  //border: 1px solid black;
+  background-color: #FFF;
+  margin-top: 0;
+}
+.selectedTitle{
+  //border: 1px dotted blue;
+  margin-top: 10px;
+  border-bottom: 1px solid #eee;
+}
+.selectedTitle p {
+  font-size:46px;
+  text-align: center;
+  width: 780px;
+}
+.selectedDescription{
+  font-style: italic;
+    border-bottom: 1px solid #eee;
+}
+.selectedDescription p{
+font-size:26px;
+  text-align: center;
+  width: 780px;
+}
+.selectedCategory{
 
+}
+.selectedCategory p{
+  font-size:16px;
+  text-align: center;
+  width: 780px;
+}
+.singleBoardPage{
+  height: 300px;
+}
+.createPin{
+  border: 2px dashed #bbb;
+  border-radius: 6px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #888;
+  cursor: pointer;
+  display: block;
+  font-size: 15px;
+  font-weight: bold;
+  position: relative;
+  text-align: center;
+  text-shadow: 0 1px 1px #fff;
+  width: 236px;
+  height: 297px;
+}
+.createPin span {
+    left: 0;
+    margin-top: 18px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+}
+.createPin:hover{
+  background: rgba(0,0,0,0.07);
+  border-color: #888;
+  color: #5f5f5f;
+  text-shadow: none;
+}
 
+.currentPin{
+  width: 236px;
+  height: 297px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #fff;
+  margin-left: 2%;
+  -webkit-border-radius: 8px;
+-moz-border-radius: 8px;
+border-radius: 8px;
+-webkit-box-shadow: -1px 5px 11px -5px rgba(0,0,0,0.57);
+-moz-box-shadow: -1px 5px 11px -5px rgba(0,0,0,0.57);
+box-shadow: -1px 5px 11px -5px rgba(0,0,0,0.57);
+}
 
+.currentPin:hover{
+ box-shadow: -1px 10px 16px -5px rgba(0,0,0,0.57);
+}
 
+.currentPinContent{
+  //border: 1px solid black;
+  padding:0;
+  width: 100%;
+  height: 297px;
+}
 
-
+.pinBoardImg{
+  -webkit-border-top-left-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+  -moz-border-radius-topleft: 8px;
+  -moz-border-radius-topright: 8px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.currentPinTitle{
+  margin-top:5px;
+}
+.currentPinTitle p{
+ font-size: 14px;
+  font-weight: 600;
+}
+.currentDescription{
+  border-bottom: 1px solid #eee;
+    overflow: auto;
+    max-height: 90px;
+    max-width: 225px;
+}
+.currentDescription p{
+    font-size:12px;
+    width: 200px;
+    text-align: justify;
+}
+.currentURL{
+ margin-top: 10px;
+}
+.currentURL p {
+ font-weight: 600;
+  font-size: 12px;
+}
 
