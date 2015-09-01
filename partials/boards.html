@@ -62,7 +62,7 @@
         <span>Create a board</span>
       </a>
        <div data-ng-include data-src="'partials/createBoard.html'"></div>
-    <div class="col-md-4 currentBoard currentBoard:hover" ng-repeat="board in userBoards" ng-href="#/board/{{ board.$id }}">
+    <div class="col-md-4 currentBoard currentBoard:hover" ng-repeat="board in userBoards" >
       <a ng-href="#/board/{{ board.$id }}">
       <div class="row">
         <div class="col-md-12 currentBoardContent">

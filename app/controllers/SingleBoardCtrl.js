@@ -77,5 +77,14 @@ app.controller("SingleBoardCtrl",
     };
 
 
+       //modal popup
+
+   $scope.modalShown = false;
+
+    $scope.toggleModal = function() {
+    console.log("click");
+    $scope.modalShown = !$scope.modalShown;
+  };
+
 
 }]);
