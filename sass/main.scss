@@ -343,6 +343,9 @@ border-radius: 8px;
 -moz-box-shadow: -1px 5px 11px -5px rgba(0,0,0,0.57);
 box-shadow: -1px 5px 11px -5px rgba(0,0,0,0.57);
 }
+.currentBoard:hover{
+ box-shadow: -1px 10px 16px -5px rgba(0,0,0,0.57);
+}
 .currentBoardContent{
   //border: 1px solid black;
   width: 100%;
@@ -360,6 +363,7 @@ box-shadow: -1px 5px 11px -5px rgba(0,0,0,0.57);
 .mainImgDiv{
   //border: 1px dotted red;
   padding:0;
+  height: 155px;
 }
 .miniImages{
   //border: 1px dotted green;
@@ -380,6 +384,9 @@ box-shadow: -1px 5px 11px -5px rgba(0,0,0,0.57);
   width:69px;
   border-radius: 8px;
 }
+
+/////////////////////////////////////
+//// boards modal popup ///
 
 
 

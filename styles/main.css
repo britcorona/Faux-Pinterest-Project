@@ -287,6 +287,9 @@ a:link a:hover {
   -moz-box-shadow: -1px 5px 11px -5px rgba(0, 0, 0, 0.57);
   box-shadow: -1px 5px 11px -5px rgba(0, 0, 0, 0.57); }
 
+.currentBoard:hover {
+  box-shadow: -1px 10px 16px -5px rgba(0, 0, 0, 0.57); }
+
 .currentBoardContent {
   width: 100%;
   height: 297px; }
@@ -300,7 +303,8 @@ a:link a:hover {
   font-weight: 600; }
 
 .mainImgDiv {
-  padding: 0; }
+  padding: 0;
+  height: 155px; }
 
 .miniImages {
   padding: 0;
