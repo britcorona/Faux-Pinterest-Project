@@ -5,7 +5,8 @@ app.controller("PinCtrl",
    "Auth",
    "Logout",
    "$location",
-  function($scope, $firebaseArray, Auth, Logout, $location) {
+   "PinIt",
+  function($scope, $firebaseArray, Auth, Logout, $location, PinIt) {
 
   	//This will connect to firebase and get the info
 	  var ref = new Firebase("https://pinterest-app.firebaseio.com/addpin");
@@ -23,6 +24,7 @@ app.controller("PinCtrl",
 		$scope.addPin = function() {
 			console.log(storeUid.getUid());
 			$scope.pins.$add({
+        board_id: [],
 				pin_name: $scope.newPin.pin_name,
 				description: $scope.newPin.description,
 				image: $scope.newPin.image,
@@ -49,9 +51,9 @@ app.controller("PinCtrl",
 
      $scope.modalShown = false;
 
-    $scope.toggleModal = function() {
-    console.log("click");
-    $scope.modalShown = !$scope.modalShown;
-  };
+    $scope.toggleModal = function(pin) {
+      $scope.modalShown = true;
+      PinIt.setPinId(pin.$id);
+    };
 
 }]);

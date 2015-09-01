@@ -37,22 +37,20 @@ app.controller("SingleBoardCtrl",
     var pinsRef = new Firebase("https://pinterest-app.firebaseio.com/addpin");
     // download the data into a local object
     $scope.pins = $firebaseArray(pinsRef);
+    console.log("$scope.pins", $scope.pins);
 
     $scope.boardPins = [];
 
-    // $scope.pins.$loaded()
-    //   .then(function(pins) { 
-    //     console.log("all pins", $scope.pins);
-    //    $scope.boardPins = pins.filter(function(pin){
-    //       return pin.board_id === $scope.boardId;
-    //     });
-    //     console.log("board pins", $scope.boardPins);   
-    //   });
+
 
     $scope.pins.$watch(function(){
-      $scope.boardPins = $scope.pins.filter(function(pin){
-        return pin.board_id === $scope.boardId;
-      });
+      $scope.boardPins = [];
+      for(var i = 0; i < $scope.pins.length; i++){
+        if($scope.pins[i].board_id.indexOf($scope.boardId) !== -1){
+          $scope.boardPins.push($scope.pins[i]);
+        }
+      }
+      console.log("board Pins", $scope.boardPins);
     });
 
     //Add Pin
@@ -60,7 +58,7 @@ app.controller("SingleBoardCtrl",
       console.log(Auth.$getAuth().uid);
       $scope.pins.$add({
         pin_name: $scope.newPin.pin_name,
-        board_id: $scope.boardId, 
+        board_id: [$scope.boardId], 
         description: $scope.newPin.description,
         image: $scope.newPin.image,
         origUrl: $scope.newPin.origUrl,

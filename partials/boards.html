@@ -15,24 +15,23 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="#/home">Home <span class="sr-only">(current)</span></a></li>
-        <li class="active"><a href="#/boards">Boards</a></li>
+        <li class="active"><a href="#/boards">My Boards</a></li>
       </ul>
-      <!-- <form class="navbar-form navbar-right" role="search">
+      <form class="navbar-form navbar-right" role="search">
         <div class="input-group">
           <input type="text" class="form-control" ng-model="pinSearch" placeholder="Search">
           <span class="input-group-btn">
-            <button type="submit" class="btn btn-primary">Submit</button>
           </span>
         </div>
         <span>
           <button type="button" class="btn btn-default btn-sm" ng-click="logout()">Logout</button>
         </span>
-      </form> -->
+      </form>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 
-<div class="container-fluid">
+<!-- <div class="container-fluid">
   <div class="row">
     <h1>Boards</h1>
     <button type="button" class="btn btn-primary btn-lg" ng-click="showAddBoards()">Add Board</button>
@@ -52,39 +51,44 @@
       Category: <input type="text" ng-model="newBoard.category">
     </div>
     <button ng-click="addBoard()">Create Board</button>
-  </div>
+  </div> -->
 
-  <div class="row">
-    <div class="col-md-3" ng-repeat="board in userBoards">
-      <a ng-href="#/board/{{ board.$id }}">
-        <h2>{{board.title}}</h2>
-        <img class="img"ng-src="{{board.imgage}}" height="146px" width= "216px">
-      </a>
-    </div>
-  </div>
-</div>
 
-<div class="container-fluid boardPage ">
+<div class="container-fluid boardPage "ng-controller="BoardsCtrl">
   <div class="row">
     <div class="col-md-12 boardDiv">
-      <a class="col-md-4 createBoard" ng-click="showAddBoards()">
-        <button class="btn btnBoard glyphicon glyphicon-plus" ng-click="showAddBoards()"></button>
+      <a class="col-md-4 createBoard" ng-click="toggleModal()">
+        <button class="btn btnBoard glyphicon glyphicon-plus" ng-click="toggleModal()"></button>
         <span>Create a board</span>
+      </a>
+       <div data-ng-include data-src="'partials/createBoard.html'"></div>
+    <div class="col-md-4 currentBoard currentBoard:hover" ng-repeat="board in userBoards" ng-href="#/board/{{ board.$id }}">
+      <div class="row">
+        <div class="col-md-12 currentBoardContent">
+          <div class="col-md-12 currentBTitle">
+            <p>{{board.title}}</p>
+          </div>
+          <div class="col-md-12 mainImgDiv">
+            <img class="mainBoardImg"ng-src="{{board.imgage}}" height="100%" width= "100%"/>
+          </div>
+          <div class="col-md-12 miniImages">
+            <div class="col-md-4 miniBoard">
+              <img class="miniBoardImg"ng-src="{{board.imgage}}" height="100%" width= "100%"/>
+            </div>
+            <div class="col-md-4 miniBoard ">
+              <img class="miniBoardImg"ng-src="{{board.imgage}}" height="100%" width= "100%"/>
+            </div>
+            <div class="col-md-4 miniBoard">
+              <img class="miniBoardImg"ng-src="{{board.imgage}}" height="100%" width= "100%"/>
+            </div>
+          </div> <!-- miniImages -->
+        </div><!-- currentBoardContent -->
+      </div><!-- row -->
+    </div> <!-- currentBoard -->
+      </div><!-- boardDiv -->
+    </div><!-- row -->
+  </div> <!-- boardPage -->
 
-      </a>
-      <div class="col-md-4 currentBoard">
-        <!-- current boards -->
-         <div class="col-md-3" ng-repeat="board in userBoards">
-      <a ng-href="#/board/{{ board.$id }}">
-        <h2>{{board.title}}</h2>
-        <img class="img"ng-src="{{board.imgage}}" height="146px" width= "216px">
-      </a>
-    </div>
-  </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 
 
