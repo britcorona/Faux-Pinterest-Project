@@ -4,7 +4,9 @@ app.controller("BoardsCtrl",
    "Auth",
    "Logout",
    "$location",
-  function($scope, $firebaseArray, Auth, Logout, $location) {
+   "PinIt",
+   "PushBoardToPin",
+  function($scope, $firebaseArray, Auth, Logout, $location, PinIt, PushBoardToPin) {
 
     // Logout
     $scope.logout = function(){
@@ -47,4 +49,14 @@ app.controller("BoardsCtrl",
       });
       $scope.newBoard = {"":""};
     };
+
+    $scope.addPinToBoard = function(board){
+      // PinIt.getPinId();
+      PushBoardToPin(PinIt.getPinId(),board.$id);
+      // console.log("board to pin to",$scope.boards.$getRecord(board.$id));
+      // console.log("board to push to", ref.child(board.$id));
+    };
+
+
+
 }]);

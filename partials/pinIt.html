@@ -33,7 +33,7 @@
                      <div class="col-md-12 listBoard" ng-controller="BoardsCtrl">
                         <h6>All Boards</h6>
                           
-                          <div class="col-md-12" ng-repeat="board in userBoards">
+                          <div class="col-md-12" ng-repeat="board in userBoards" ng-click="addPinToBoard(board)">
                             <a ng-href="#/board/{{ board.$id }}">
                               <h2>{{board.title}}</h2>
                               <img class="img"ng-src="{{board.imgage}}" height="146px" width= "216px">
