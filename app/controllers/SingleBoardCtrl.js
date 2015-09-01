@@ -5,7 +5,8 @@ app.controller("SingleBoardCtrl",
    "$routeParams",
    "Logout",
    "$location",
-  function($scope, $firebaseArray, Auth, $routeParams, Logout, $location) {
+   "GetUrl",
+  function($scope, $firebaseArray, Auth, $routeParams, Logout, $location, GetUrl) {
 
     // Logout
     $scope.logout = function(){
@@ -30,6 +31,11 @@ app.controller("SingleBoardCtrl",
        $scope.selectedBoard = boards.filter(function(board){
           return board.$id === $scope.boardId;
         })[0];   
+      });
+
+      //Experimental get url data
+      GetUrl("http://www.facebook.com").then(function(data){
+        console.log("data", data);
       });
 
 
