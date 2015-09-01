@@ -6,6 +6,11 @@ body {
   color: $primary-color;
   background-color: #EEE;
 }
+
+.nav {
+  font-size: 1.8em;
+}
+
 .pinDiv{
   // border: 1px solid #eee;
   height: 370px;
@@ -25,6 +30,16 @@ body {
   box-shadow: -1px 5px 11px -5px rgba(0,0,0,0.57);
 
 }
+
+#homeSearchBar {
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+// #myBoardsTab {
+//   float: right;
+// }
+
 .addPin{
   //border: 1px dotted yellow;
   height: 100%;

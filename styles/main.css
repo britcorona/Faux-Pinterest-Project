@@ -3,6 +3,9 @@ body {
   color: #333;
   background-color: #EEE; }
 
+.nav {
+  font-size: 1.8em; }
+
 .pinDiv {
   height: 370px;
   width: 290px;
@@ -19,6 +22,10 @@ body {
   -webkit-box-shadow: -1px 5px 11px -5px rgba(0, 0, 0, 0.57);
   -moz-box-shadow: -1px 5px 11px -5px rgba(0, 0, 0, 0.57);
   box-shadow: -1px 5px 11px -5px rgba(0, 0, 0, 0.57); }
+
+#homeSearchBar {
+  margin-top: 10px;
+  margin-left: 15px; }
 
 .addPin {
   height: 100%;
