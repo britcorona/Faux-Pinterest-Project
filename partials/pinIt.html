@@ -28,14 +28,14 @@
                       <h4>Pick a board</h4>
                     </div>
                      <div class="col-md-12 searchInput input-group-lg">
-                      <input type="text" class="form-control" placeholder="Search" aria-describedby="sizing-addon1" ng-model="pinSearch">
+                      <input type="text" class="form-control" placeholder="Search" aria-describedby="sizing-addon1" ng-model="searchBoards">
                     </div>
                      <div class="col-md-12 listBoard" ng-controller="BoardsCtrl">
                         <h6>All Boards</h6>
                           
 
 
-                          <div class="col-md-12 newBoard newBoard:hover" ng-repeat="board in userBoards" ng-mouseenter="hovering=true" ng-mouseleave="hovering=false" ng-click="addPinToBoard(board)">
+                          <div class="col-md-12 newBoard newBoard:hover" ng-repeat="board in userBoards | filter:searchBoards" ng-mouseenter="hovering=true" ng-mouseleave="hovering=false" ng-click="addPinToBoard(board)">
 
                             <a ng-href="#/board/{{ board.$id }}">
                               <img class="boardImg col-md-2" ng-src="{{board.imgage}}" height="34px" width= "34px">
