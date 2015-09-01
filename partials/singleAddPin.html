@@ -1,25 +1,36 @@
 <modal-dialog show='modalShown' width='100%' height='100%'>
     <div class="container-fluid modalPopup" ng-controller="SingleBoardCtrl">
-      <div class="row">
-        <div class="col-md-12">
-            <div class="col-md-8">
-                <div>
-                Pin name: <input type="text" ng-model="newPin.pin_name">
-                </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-6">
+                    <h3> Enter Pin Information</h3>
+                    <div>
+                    Pin name: <input type="text" ng-model="newPin.pin_name">
+                    </div>
 
-                <div>
-                Image URL: <input type="text" ng-model="newPin.image">
-                </div>
+                    <div>
+                    Image URL: <input type="text" ng-model="newPin.image">
+                    </div>
 
-                <div>
-                Description: <input type="text" ng-model="newPin.description">
-                </div>
+                    <div>
+                    Description: <input type="text" ng-model="newPin.description">
+                    </div>
 
-                <div>
-                Original URL: <input type="text" ng-model="newPin.origUrl">
-                </div>
+                    <div>
+                    Original URL: <input type="text" ng-model="newPin.origUrl">
+                    </div>
 
-                <button ng-click="addPin()">Create Pin</button>
+                    <button class="btn btn-primary" ng-click="addPin()">Create Pin</button>
+                </div>
+                <div class="col-md-6">
+                    <h3> Or enter URL (beta)</h3>
+                    <div>
+                        URL: <input id="userUrl" type="text" ng-model="urlReceived">
+                        <button ng-click="getTheUrl()" type="button" class="btn btn-default">Populate Info</button>
+                        <div class="col-md-6">
+                            <img ng-src="{{newPin.image}}" height="100" width="100">
+                        </div>
+                    </div>
                 </div>
             </div> 
         </div><!-- /col-md-12 -->
