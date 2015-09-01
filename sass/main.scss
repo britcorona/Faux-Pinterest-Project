@@ -113,6 +113,9 @@ body {
   height: 15%;
   width: 370px;
   border-top: 1px solid #eee;
+  overflow: auto;
+    max-height: 70px;
+    max-width: 225px;
 }
 p{
   width:240px;
