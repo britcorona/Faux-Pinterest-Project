@@ -197,7 +197,9 @@ border-top-right-radius: 8px;
   border-top: 1px solid #eee;
 }
 .newBoard{
-  //border: 1px solid yellow;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
 }
 .newBoard:hover{
 background-color:#f6f6f6;
@@ -209,6 +211,18 @@ background-color:#f6f6f6;
 }
 .form-control{
   background-color: #f6f6f6;
+}
+.boardImg{
+  padding:0;
+  -webkit-border-radius: 8px;
+-moz-border-radius: 8px;
+border-radius: 8px;
+}
+.boardTitle {
+  font-size: 18px;
+}
+a:link a:hover{
+text-decoration: none !important;
 }
 
 
@@ -262,11 +276,11 @@ border-radius: 8px;
 /////////////////////////////////////////////
 //board page ///
 .boardPage{
-  border: 1px solid black;
+  //border: 1px solid black;
   height: 300px;
 }
 .boardDiv{
-  border: 1px dotted blue;
+ // border: 1px dotted blue;
   height: 300px;
 }
 .createBoard{
@@ -318,12 +332,55 @@ border-radius: 8px;
 .currentBoard{
   width: 236px;
   height: 297px;
-  border-radius: 6px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   background-color: #fff;
   margin-left: 2%;
+     -webkit-border-radius: 8px;
+-moz-border-radius: 8px;
+border-radius: 8px;
+-webkit-box-shadow: -1px 5px 11px -5px rgba(0,0,0,0.57);
+-moz-box-shadow: -1px 5px 11px -5px rgba(0,0,0,0.57);
+box-shadow: -1px 5px 11px -5px rgba(0,0,0,0.57);
 }
+.currentBoardContent{
+  //border: 1px solid black;
+  width: 100%;
+  height: 297px;
+}
+.currentBTitle{
+  //border: 1px dotted blue;
+  margin-top: 5px;
+  padding: 0;
+}
+.currentBTitle p {
+  font-size: 14px;
+  font-weight: 600;
+}
+.mainImgDiv{
+  //border: 1px dotted red;
+  padding:0;
+}
+.miniImages{
+  //border: 1px dotted green;
+  padding:0;
+  margin-top: 5px;
+}
+.miniBoard{
+  //border: 1px dotted pink;
+  padding: 0;
+}
+.mainBoardImg{
+  border-radius: 8px;
+}
+.miniBoardImg{
+  //border: 1px dotted yellow;
+  padding-right: 2px;
+  height: 69px;
+  width:69px;
+  border-radius: 8px;
+}
+
 
 
 

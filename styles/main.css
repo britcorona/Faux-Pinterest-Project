@@ -152,6 +152,11 @@ p {
   margin-top: 15px;
   border-top: 1px solid #eee; }
 
+.newBoard {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 5px; }
+
 .newBoard:hover {
   background-color: #f6f6f6; }
 
@@ -161,6 +166,18 @@ p {
 
 .form-control {
   background-color: #f6f6f6; }
+
+.boardImg {
+  padding: 0;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px; }
+
+.boardTitle {
+  font-size: 18px; }
+
+a:link a:hover {
+  text-decoration: none !important; }
 
 .ng-modal-overlay {
   /* A dark translucent div that covers the whole screen */
@@ -207,11 +224,9 @@ p {
   font-family: 'arial', 'sans-serif'; }
 
 .boardPage {
-  border: 1px solid black;
   height: 300px; }
 
 .boardDiv {
-  border: 1px dotted blue;
   height: 300px; }
 
 .createBoard {
@@ -261,10 +276,46 @@ p {
 .currentBoard {
   width: 236px;
   height: 297px;
-  border-radius: 6px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   background-color: #fff;
-  margin-left: 2%; }
+  margin-left: 2%;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: -1px 5px 11px -5px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: -1px 5px 11px -5px rgba(0, 0, 0, 0.57);
+  box-shadow: -1px 5px 11px -5px rgba(0, 0, 0, 0.57); }
+
+.currentBoardContent {
+  width: 100%;
+  height: 297px; }
+
+.currentBTitle {
+  margin-top: 5px;
+  padding: 0; }
+
+.currentBTitle p {
+  font-size: 14px;
+  font-weight: 600; }
+
+.mainImgDiv {
+  padding: 0; }
+
+.miniImages {
+  padding: 0;
+  margin-top: 5px; }
+
+.miniBoard {
+  padding: 0; }
+
+.mainBoardImg {
+  border-radius: 8px; }
+
+.miniBoardImg {
+  padding-right: 2px;
+  height: 69px;
+  width: 69px;
+  border-radius: 8px; }
 
 /*# sourceMappingURL=main.css.map */
