@@ -462,4 +462,9 @@ a {
   font-weight: 600;
   font-size: 12px; }
 
+.desSize {
+  overflow: auto;
+  max-height: 90px;
+  max-width: 100%; }
+
 /*# sourceMappingURL=main.css.map */
