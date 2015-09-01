@@ -29,6 +29,9 @@ body {
   -moz-box-shadow: -1px 5px 11px -5px rgba(0, 0, 0, 0.57);
   box-shadow: -1px 5px 11px -5px rgba(0, 0, 0, 0.57); }
 
+.gutter:hover {
+  box-shadow: -1px 10px 16px -5px rgba(0, 0, 0, 0.57); }
+
 #homeSearchBar {
   margin-top: 10px;
   margin-left: 15px; }
@@ -167,7 +170,10 @@ p {
 
 .listBoard {
   margin-top: 15px;
-  border-top: 1px solid #eee; }
+  border-top: 1px solid #eee;
+  overflow: auto;
+  max-width: 100%;
+  max-height: 200px; }
 
 .newBoard {
   padding-top: 5px;
@@ -195,6 +201,9 @@ p {
 
 a:link a:hover {
   text-decoration: none !important; }
+
+.modalQuickAdd {
+  border: 1px solid black; }
 
 .ng-modal-overlay {
   /* A dark translucent div that covers the whole screen */
@@ -294,6 +303,7 @@ a:link a:hover {
 .currentBoard {
   width: 236px;
   height: 297px;
+  margin-bottom: 10px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   background-color: #fff;
@@ -461,5 +471,10 @@ a {
 .currentURL p {
   font-weight: 600;
   font-size: 12px; }
+
+.desSize {
+  overflow: auto;
+  max-height: 90px;
+  max-width: 100%; }
 
 /*# sourceMappingURL=main.css.map */

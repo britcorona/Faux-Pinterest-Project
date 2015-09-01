@@ -19,7 +19,7 @@
       </ul>
       <form class="navbar-form navbar-right" role="search">
         <div class="input-group">
-          <input type="text" class="form-control" ng-model="pinSearch" placeholder="Search">
+          <input type="text" class="form-control" ng-model="boardSearch" placeholder="Search">
           <span class="input-group-btn">
           </span>
         </div>
@@ -40,7 +40,7 @@
         <span>Create a board</span>
       </a>
        <div data-ng-include data-src="'partials/createBoard.html'"></div>
-    <div class="col-md-4 currentBoard currentBoard:hover" ng-repeat="board in userBoards" >
+    <div class="col-md-4 currentBoard currentBoard:hover" ng-repeat="board in userBoards | filter:boardSearch" >
       <a ng-href="#/board/{{ board.$id }}">
       <div class="row">
         <div class="col-md-12 currentBoardContent">
@@ -49,8 +49,10 @@
           </div>
           <div class="col-md-12 mainImgDiv">
             <img class="mainBoardImg"ng-src="{{board.imgage}}" height="100%" width= "100%"/>
+            </a>
+            <p class="desSize">{{board.description}}</p>
           </div>
-          <div class="col-md-12 miniImages">
+          <!-- <div class="col-md-12 miniImages">
             <div class="col-md-4 miniBoard">
               <img class="miniBoardImg"ng-src="{{board.imgage}}" height="100%" width= "100%"/>
             </div>
@@ -60,17 +62,11 @@
             <div class="col-md-4 miniBoard">
               <img class="miniBoardImg"ng-src="{{board.imgage}}" height="100%" width= "100%"/>
             </div>
-          </div> <!-- miniImages -->
-        </a>
+          </div> <! miniImages -->
+        <!-- </a> -->
         </div><!-- currentBoardContent -->
       </div><!-- row -->
     </div> <!-- currentBoard -->
       </div><!-- boardDiv -->
     </div><!-- row -->
   </div> <!-- boardPage -->
-
-
-
-
-
-
