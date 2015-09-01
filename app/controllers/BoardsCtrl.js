@@ -53,7 +53,9 @@ app.controller("BoardsCtrl",
 
     $scope.addPinToBoard = function(board){
       // PinIt.getPinId();
-      PushBoardToPin(PinIt.getPinId(),board.$id);
+      console.log("addpin to board fired");
+      console.log("board", board);
+      PushBoardToPin(PinIt.getPinId(), board.$id);
       // console.log("board to pin to",$scope.boards.$getRecord(board.$id));
       // console.log("board to push to", ref.child(board.$id));
     };
