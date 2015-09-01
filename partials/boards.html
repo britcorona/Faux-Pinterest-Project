@@ -65,6 +65,7 @@
       </a>
        <div data-ng-include data-src="'partials/createBoard.html'"></div>
     <div class="col-md-4 currentBoard currentBoard:hover" ng-repeat="board in userBoards" ng-href="#/board/{{ board.$id }}">
+      <a ng-href="#/board/{{ board.$id }}">
       <div class="row">
         <div class="col-md-12 currentBoardContent">
           <div class="col-md-12 currentBTitle">
@@ -84,6 +85,7 @@
               <img class="miniBoardImg"ng-src="{{board.imgage}}" height="100%" width= "100%"/>
             </div>
           </div> <!-- miniImages -->
+        </a>
         </div><!-- currentBoardContent -->
       </div><!-- row -->
     </div> <!-- currentBoard -->

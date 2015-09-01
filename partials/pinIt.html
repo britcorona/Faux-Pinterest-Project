@@ -38,7 +38,7 @@
                           <div class="col-md-12 newBoard newBoard:hover" ng-repeat="board in userBoards" ng-mouseenter="hovering=true" ng-mouseleave="hovering=false" ng-click="addPinToBoard(board)">
 
                             <a ng-href="#/board/{{ board.$id }}">
-                              <img class="boardImg col-md-2"ng-src="{{board.imgage}}" height="34px" width= "34px">
+                              <img class="boardImg col-md-2" ng-src="{{board.imgage}}" height="34px" width= "34px">
                               <p class="boardTitle col-md-10">{{board.title}}</p>
                               
                             </a>
