@@ -32,7 +32,7 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-<h2>{{selectedBoard.title}}</h2>
+<!-- <h2>{{selectedBoard.title}}</h2>
 <h4>{{selectedBoard.category}}</h4>
 <p>{{selectedBoard.description}}</p>
 <button type="button" class="btn btn-primary" ng-click="showAddForm()"> Add a Pin</button>
@@ -61,4 +61,68 @@
   <h3>{{pin.pin_name}}</h3>
   <img ng-src="{{pin.image}}">
   {{pin.description}}
-</div>
+</div> -->
+
+<div class="container-fluid singleBoardPage "ng-controller="SingleBoardCtrl">
+  <div class="row">
+    <div class="col-md-12  selectedBoard">
+      <div class="row">
+      <div class="col-md-8 col-md-offset-2 selectedTitle">
+        <p>{{selectedBoard.title}}</p>
+      </div>
+      <div class="col-md-8 col-md-offset-2 selectedDescription">
+        <p>{{selectedBoard.description}}</p>
+      </div>
+      <div class="col-md-8 col-md-offset-2 selectedCategory">
+        <p>{{selectedBoard.category}}</p>
+      </div>
+    </div>
+    </div>
+
+    <div class="col-md-12 boardDiv">
+      <a class="col-md-4 createPin" ng-click="toggleModal()">
+        <button class="btn btnBoard glyphicon glyphicon-plus" ng-click="toggleModal()"></button>
+        <span>Add a Pin</span>
+      </a>
+       <div data-ng-include data-src="'partials/singleAddPin.html'"></div>
+    <div class="col-md-4 currentPin currentPin:hover" ng-repeat="pin in boardPins">
+      <div class="row">
+        <div class="col-md-12 currentPinContent">
+          <div class="col-md-12 mainImgDiv">
+            <img class="pinBoardImg"ng-src="{{pin.image}}" height="100%" width= "100%"/>
+          </div>
+          <div class="col-md-12 currentPinTitle">
+            <p>{{pin.pin_name}}</p>
+          </div>
+          <div class="col-md-12 currentDescription">
+            <p>{{pin.description}}</p>
+          </div>
+          <!-- <div class="col-md-12 currentURL">
+            <p>{{pin.origUrl}}</p>
+          </div> -->
+        </div><!-- currentBoardContent -->
+      </div><!-- row -->
+    </div> <!-- currentBoard -->
+      </div><!-- boardDiv -->
+    </div><!-- row -->
+  </div> <!-- boardPage -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,28 @@
+<modal-dialog show='modalShown' width='100%' height='100%'>
+    <div class="container-fluid modalPopup" ng-controller="SingleBoardCtrl">
+      <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-8">
+                <div>
+                Pin name: <input type="text" ng-model="newPin.pin_name">
+                </div>
+
+                <div>
+                Image URL: <input type="text" ng-model="newPin.image">
+                </div>
+
+                <div>
+                Description: <input type="text" ng-model="newPin.description">
+                </div>
+
+                <div>
+                Original URL: <input type="text" ng-model="newPin.origUrl">
+                </div>
+
+                <button ng-click="addPin()">Create Pin</button>
+                </div>
+            </div> 
+        </div><!-- /col-md-12 -->
+      </div><!-- /row -->
+    </div><!-- /container-fluid -->
+</modal-dialog> 
