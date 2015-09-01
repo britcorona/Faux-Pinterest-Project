@@ -1,5 +1,5 @@
     <modal-dialog show='modalShown' width='100%' height='100%'>
-        <div class="container-fluid modalPopup">
+        <div class="container-fluid modalPopup" ng-controller="PinCtrl">
           <div class="row">
             <div class="col-md-12">
               <div class="col-md-6 modalAdd">
@@ -23,7 +23,7 @@
             </div> <!--modalAdd -->
               <div class="col-md-6 modalAddBoard">
                 <div class="row">
-                  <div class="col-md-12">
+                 <div class="col-md-12">
                     <div class="col-md-12 pickBoard">
                       <h4>Pick a board</h4>
                     </div>
@@ -32,9 +32,6 @@
                     </div>
                      <div class="col-md-12 listBoard" ng-controller="BoardsCtrl">
                         <h6>All Boards</h6>
-                          
-
-
                           <div class="col-md-12 newBoard newBoard:hover" ng-repeat="board in userBoards | filter:searchBoards" ng-mouseenter="hovering=true" ng-mouseleave="hovering=false" ng-click="addPinToBoard(board)">
 
                             <a ng-href="#/board/{{ board.$id }}">
@@ -43,12 +40,11 @@
                               
                             </a>
                           </div>
-                       
-                          <!-- <div class="col-md-12 newBoard newBoard:hover" ng-mouseenter="hovering=true" ng-mouseleave="hovering=false">
+                    </div><!-- /listBoard -->
+                  <!--    <div class="col-md-12 newBoard newBoard:hover" ng-mouseenter="hovering=true" ng-mouseleave="hovering=false" ng-click="quickAdd()">
                             <button class="col-md-2 btn btn-default glyphicon glyphicon-plus"></button>
                           <p class="col-md-10 p-newBoard">Create A New Board</p> 
                         </div> -->
-                    </div><!-- /listBoard -->
                   </div><!-- /col-md-12 -->
                 </div><!-- /row -->
               </div><!-- /modalAddBoard -->

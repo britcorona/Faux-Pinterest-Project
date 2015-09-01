@@ -50,7 +50,7 @@ app.controller("SingleBoardCtrl",
           $scope.boardPins.push($scope.pins[i]);
         }
       }
-      console.log("board Pins", $scope.boardPins);
+      //console.log("board Pins", $scope.boardPins);
     });
 
     //Add Pin
