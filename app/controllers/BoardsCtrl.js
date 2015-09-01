@@ -50,6 +50,7 @@ app.controller("BoardsCtrl",
       $scope.newBoard = {"":""};
     };
 
+
     $scope.addPinToBoard = function(board){
       // PinIt.getPinId();
       PushBoardToPin(PinIt.getPinId(),board.$id);
@@ -57,6 +58,16 @@ app.controller("BoardsCtrl",
       // console.log("board to push to", ref.child(board.$id));
     };
 
+
+
+    //modal popup
+
+   $scope.modalShown = false;
+
+    $scope.toggleModal = function() {
+    console.log("click");
+    $scope.modalShown = !$scope.modalShown;
+  };
 
 
 }]);
