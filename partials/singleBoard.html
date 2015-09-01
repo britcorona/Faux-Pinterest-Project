@@ -89,7 +89,9 @@
       <div class="row">
         <div class="col-md-12 currentPinContent">
           <div class="col-md-12 mainImgDiv">
+          <a ng-href="{{pin.origUrl}}" target="blank">
             <img class="pinBoardImg"ng-src="{{pin.image}}" height="100%" width= "100%"/>
+          </a>
           </div>
           <div class="col-md-12 currentPinTitle">
             <p>{{pin.pin_name}}</p>
