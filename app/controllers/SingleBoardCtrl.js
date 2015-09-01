@@ -5,7 +5,10 @@ app.controller("SingleBoardCtrl",
    "$routeParams",
    "Logout",
    "$location",
-  function($scope, $firebaseArray, Auth, $routeParams, Logout, $location) {
+   "getUrl",
+  function($scope, $firebaseArray, Auth, $routeParams, Logout, $location, getUrl) {
+
+
 
     // Logout
     $scope.logout = function(){
@@ -75,6 +78,30 @@ app.controller("SingleBoardCtrl",
         $scope.pinFormVisible = true;
       }
     };
+
+
+
+        getUrl.then(function(data){
+      console.log("get data", data);
+      // var dataAr = data.split(/<\/?(?:div|body|html|head|p|br)[^>]*>\s*/im);
+      // console.log("dataAr", dataAr);
+      var titleStart = data.indexOf("<title>");
+      var titleFinish = data.indexOf("</title>");
+      console.log("title", data.substring(titleStart + 7, titleFinish));
+      var title = data.substring(titleStart + 7, titleFinish);
+
+      var descriptionStart = data.indexOf('<meta name="description" content="');
+      var descriptionOn = data.substring(descriptionStart);
+      var descriptionend = descriptionOn.indexOf('>');
+      var description = data.substring(descriptionStart + 34, descriptionStart + descriptionend);
+      console.log("description", description);
+
+
+      // console.log(data.indexOf("<body"));
+      // $("#invisible").html(data);
+      // console.log("body!!!!!!!!", $(parsed));
+      // console.log("body: ", $("#invisible body"));
+    });
 
 
 

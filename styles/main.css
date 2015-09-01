@@ -337,4 +337,7 @@ a {
   width: 69px;
   border-radius: 8px; }
 
+#invisible {
+  display: none; }
+
 /*# sourceMappingURL=main.css.map */
