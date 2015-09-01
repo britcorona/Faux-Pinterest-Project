@@ -76,15 +76,6 @@ app.config(['$routeProvider', function($routeProvider){
         }]
       }
 		}).
-    when('/modalAddBoard', {
-      templateUrl: 'partials/modalAddBoard.html',
-      controller: 'PinCtrl',
-      resolve: {
-        "currentAuth": ["Auth", function(Auth) {
-          return Auth.$requireAuth();
-        }]
-      }
-    }).
     otherwise({
       redirectTo: '/home'
     });
