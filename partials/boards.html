@@ -64,3 +64,30 @@
     </div>
   </div>
 </div>
+
+<div class="container-fluid boardPage ">
+  <div class="row">
+    <div class="col-md-12 boardDiv">
+      <a class="col-md-4 createBoard" ng-click="showAddBoards()">
+        <button class="btn btnBoard glyphicon glyphicon-plus" ng-click="showAddBoards()"></button>
+        <span>Create a board</span>
+
+      </a>
+      <div class="col-md-4 currentBoard">
+        <!-- current boards -->
+         <div class="col-md-3" ng-repeat="board in userBoards">
+      <a ng-href="#/board/{{ board.$id }}">
+        <h2>{{board.title}}</h2>
+        <img class="img"ng-src="{{board.imgage}}" height="146px" width= "216px">
+      </a>
+    </div>
+  </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
