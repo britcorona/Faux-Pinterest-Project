@@ -9,6 +9,9 @@ body {
 .nav {
   font-size: 1.8em; }
 
+.navbar {
+  background-color: #001f3f; }
+
 .pinDiv {
   height: 370px;
   width: 290px;
